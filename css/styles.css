@@ -4,18 +4,62 @@ body {
     background-color: #ffffff;
   }
  
+   *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
  ul, ol {
     list-style-type: none;
+    margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 a{
     text-decoration: none;
 }
 
-button{
-   cursor: pointer;
+ /*--------------------HEADER----------------------*/
+ .page-header{
+    border-bottom: 1px solid #E7E9FC;
+}
+.page-header-container{
+    display: flex;
+    align-items: center;
 }
 
+.navigation{
+    display: flex;
+    align-items: center;
+}
 .logo{
     font-family: "Raleway", sans-serif;
 font-weight: 700;
@@ -24,9 +68,14 @@ line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #4d5ae5;
+margin-right: 76px;
 }
 .logo-color{
     color:#2e2f42
+}
+.nav-menu{
+    display: flex;
+  gap: 40px;
 }
 .menu-link{
     font-family: "Roboto", sans-serif;
@@ -35,7 +84,9 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color:#2e2f42;
-
+padding-top: 24px;
+padding-bottom: 24px;
+display: block;
 }
 .menu-link:hover,
 .menu-link:focus{
@@ -43,6 +94,11 @@ color:#2e2f42;
 }
 .top-address {
     font-style: normal;
+    margin-left: auto;
+}
+.menu-address{
+    display: flex;
+  gap: 40px;
 }
 .menu-link-address{
     font-weight: 400;
@@ -50,6 +106,9 @@ color:#2e2f42;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    padding-top: 24px;
+  padding-bottom: 24px;
+
 }
 .menu-link-address:hover,
 .menu-link-address:focus{
@@ -57,8 +116,13 @@ color:#2e2f42;
 }
 
 /*---------------------HERO-------------------*/
-.section-text{
+.section-text-container {
     background: #2e2f42;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .main-section{
 font-family: "Roboto", sans-serif;
@@ -68,6 +132,10 @@ line-height: 1.07;
 letter-spacing: 0.02em;
 text-align: center;
 color: #fff;
+
+max-width: 496px;
+  min-width: 120px;
+  margin: 0 auto 48px auto;
 }
 .button-order{
     font-family: "Roboto", sans-serif;
@@ -78,7 +146,14 @@ letter-spacing: 0.04em;
 color: #ffffff;
 background: #4d5ae5;
 cursor: pointer;
+margin: 0 auto;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
 }
+
 .button-order:hover{
     background-color: #404bbf;
 }
@@ -87,12 +162,24 @@ background-color: #404bbf;
 color: #ffffff;
 }
 /*-------------------BENEFITS-------------*/
+.benefits-title{
+    padding: 120px 0;
+}
+.main-benefits{
+    display: flex;
+    gap: 24px;
+}
+.main-benefits-item{
+    width: calc((100% - 72px) / 4);
+}
+
 .main-benefits-item-title{
 font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
 color: #2e2f42;
+margin-bottom: 8px;
 }
 .main-benefits-item-text{
 font-weight: 400;
@@ -104,9 +191,16 @@ color: #434455;
 /*----------------------TEAM----------------*/
 .section-team{
     background-color: #f4f4fd;
+    padding-top: 120px;
+  padding-bottom: 120px;
 }
 .section-team-list-item  {
-    background-color: #fff;
+    width: calc((100% - 72px) / 4);
+  background-color: #FFFFFF;
+  border-radius: 0px 0px 4px 4px;
+}
+.team-page{
+    padding: 32px 0;
 }
 .section-team-title{
     font-weight: 700;
@@ -116,7 +210,14 @@ letter-spacing: 0.02em;
 text-align: center;
 text-transform: capitalize;
 color: #2e2f42;
-background-color: #FFFFFF;
+margin-bottom: 72px;
+}
+.section-team-list{
+    display: flex;
+  gap: 24px;
+}
+.section-team-list-img{
+    display: block;
 }
 .section-list-title{
     font-weight: 500;
@@ -125,7 +226,8 @@ line-height: 1.2;
 letter-spacing: 0.02em;
 text-align: center;
 color: #2e2f42;
-background-color: #FFFFFF;
+margin-bottom: 8px;
+  text-align: center;
 }
 .section-list-text{
     font-weight: 400;
@@ -133,20 +235,44 @@ background-color: #FFFFFF;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
-    color: #434455; 
-    background-color: #f4f4fd; 
+    color: #434455;  
+    text-align: center;
 }
 /*----------------PORTFOLIO----------------*/
-.page-footer-text{
-font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: #f4f4fd;
+.portolio{
+    padding-top: 120px;
+  padding-bottom: 120px;
+  border-top: none;
 }
-
+.portfolio-list-img{
+    display: block;
+  max-width: 100%;
+  height: auto;
+}
+.portfolio-list-text{
+    font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.portfolio-list{
+    display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 48px;
+}
 .portfolio-list-item{
+    width: calc((100% - 48px) / 3);
     background-color: #ffffff;
+}
+.portfolio-text-main{
+    padding: 32px 0;
+
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 .portfolio-title{
 font-weight: 700;
@@ -156,6 +282,7 @@ letter-spacing: 0.02em;
 text-align: center;
 color: #2e2f42;
 text-transform: capitalize;
+margin-bottom: 72px;
 }
 .portfolio-list-text{
 font-weight: 400;
@@ -170,10 +297,18 @@ font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
 color: #2e2f42;
+margin-bottom: 8px;
 }
 /*----------------FOOTER-------------------*/
+.page-footer-container{
+    padding-left: 0;
+    flex-direction: column;  
+}
 .page-footer{
     background-color: #2e2f42;
+  padding: 100px 0;
+ margin-right: auto;
+  margin-left: auto;
 }
 .page-footer-logo{
     font-family: "Raleway", sans-serif;
@@ -184,13 +319,16 @@ letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #4d5ae5;
 background-color: #2e2f42
+margin-bottom: 16px;
+display: inline-block;
 }
 .color-logo{
     color:#F4F4FD;
+    display: inline-block;
 }
 .page-footer-text{
     line-height: 1.5;
-  color: #F4F4FD;
-  letter-spacing: 0.02em;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    max-width: 264px;
 }
- 
