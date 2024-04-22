@@ -239,11 +239,11 @@ margin-bottom: 8px;
     text-align: center;
 }
 /*----------------PORTFOLIO----------------*/
-.portolio{
+.portfolio{
     padding-top: 120px;
   padding-bottom: 120px;
-  border-top: none;
 }
+
 .portfolio-list-img{
     display: block;
   max-width: 100%;
